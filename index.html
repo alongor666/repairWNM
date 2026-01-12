@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龙行健 · 全息健康修复 SOP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --apple-bg: #F5F5F7;
+            --apple-text: #1D1D1F;
+            --apple-blue: #0071E3;
+            --apple-red: #FF3B30;
+            --apple-green: #34C759;
+            --apple-card-bg: rgba(255, 255, 255, 0.85);
+        }
+        body {
+            font-family: 'SF Pro Display', 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--apple-bg);
+            color: var(--apple-text);
+            line-height: 1.5;
+        }
+        .glass-morphism {
+            background: var(--apple-card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .card-shadow {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1D1D1F 0%, #434343 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .sidebar-sticky {
+            position: sticky;
+            top: 2rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-morphism border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="font-bold text-lg tracking-tight">龙行健 · HEAL-SOP</span>
+            <div class="flex space-x-6 text-sm font-medium text-gray-500">
+                <a href="#audit" class="hover:text-black">状态审计</a>
+                <a href="#logic" class="hover:text-black">修复逻辑</a>
+                <a href="#diet" class="hover:text-black">饮食矩阵</a>
+                <a href="#plan" class="hover:text-black text-blue-600">七日计划</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
+        
+        <!-- Header -->
+        <header class="mb-16 text-center md:text-left">
+            <h1 class="text-5xl md:text-7xl font-bold gradient-text mb-6">重启·生命资产</h1>
+            <p class="text-xl text-gray-500 max-w-3xl">基于 2018-2026 全量医疗数据挖掘，针对 <b>C2 型萎缩性胃炎</b> 与 <b>代谢超载</b> 的定制化修复白皮书。</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Sidebar: Asset Audit -->
+            <aside class="lg:col-span-4">
+                <div class="sidebar-sticky space-y-6">
+                    <div class="glass-morphism p-8 rounded-[2.5rem] card-shadow border-l-4 border-blue-500">
+                        <h2 class="text-xl font-bold mb-6 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            核心资产审计
+                        </h2>
+                        <div class="space-y-6 text-sm">
+                            <div class="pb-4 border-b border-gray-100">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-semibold text-gray-700">胃粘膜防御 (C2型萎缩)</span>
+                                    <span class="status-badge bg-red-100 text-red-600">高风险</span>
+                                </div>
+                                <p class="text-gray-400 text-xs">2026胃镜：菲薄、血管透见、粗糙不平。</p>
+                            </div>
+                            <div class="pb-4 border-b border-gray-100">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-semibold text-gray-700">尿酸管理 (UA)</span>
+                                    <span class="status-badge bg-orange-100 text-orange-600">高位波动</span>
+                                </div>
+                                <p class="text-gray-400 text-xs">历史值：446 - 506μmol/L。代谢超载。</p>
+                            </div>
+                            <div class="pb-4 border-b border-gray-100">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-semibold text-gray-700">肝脏代谢 (脂肪肝/血吸虫)</span>
+                                    <span class="status-badge bg-yellow-100 text-yellow-600">中风险</span>
+                                </div>
+                                <p class="text-gray-400 text-xs">地图样改变，胆碱酯酶持续走高。</p>
+                            </div>
+                            <div class="pb-4">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-semibold text-gray-700">心肺储备</span>
+                                    <span class="status-badge bg-green-100 text-green-600">稳健</span>
+                                </div>
+                                <p class="text-gray-400 text-xs">心动过缓(52-54bpm)，肺结节(3mm以下)定期复查。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content: SOP -->
+            <div class="lg:col-span-8 space-y-12">
+                
+                <!-- Section: Principles -->
+                <section id="logic" class="glass-morphism p-10 rounded-[2.5rem] card-shadow bg-white/50">
+                    <h2 class="text-3xl font-bold mb-8">第一性原理：为何不准挨饿？</h2>
+                    <div class="prose prose-blue text-gray-600 max-w-none">
+                        <p class="mb-6">阿龙，你的胃粘膜目前处于<b>“薄弱期”</b>。正常胃粘膜是一道厚实的化学防线，而你的 C2 型萎缩意味着这道防线已经变薄，甚至部分区域血管纹理直接暴露（血管透见）。</p>
+                        <div class="grid md:grid-cols-2 gap-8 text-sm">
+                            <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                                <h3 class="font-bold text-blue-900 mb-2">挨饿的风险：自噬性腐蚀</h3>
+                                <p>空腹时胃酸依然分泌。对于萎缩粘膜，胃酸没有食物中和，会直接接触脆弱的细胞壁，造成类似化学烧伤的微损伤。<b>绝对不能让你的胃“空转”。</b></p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+                                <h3 class="font-bold text-gray-900 mb-2">进食的本质：外源性屏障</h3>
+                                <p>每一餐尤其是苏打饼干，都是在为你那层变薄的粘膜提供一层物理和化学的“缓冲区”。<b>进食不是为了能量，是为了保护。</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Diet Matrix -->
+                <section id="diet" class="space-y-6">
+                    <h2 class="text-3xl font-bold px-4">全息饮食防御矩阵</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Allowed -->
+                        <div class="glass-morphism p-8 rounded-[2.5rem] bg-green-50/20 border-l-8 border-green-500">
+                            <h3 class="font-bold text-green-700 mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                进取清单 (准入)
+                            </h3>
+                            <ul class="space-y-4 text-sm">
+                                <li><b>主食：</b>苏打饼干（战术补给）、馒头、软烂小米粥、面片。</li>
+                                <li><b>蛋白：</b>蒸蛋羹（极易吸收）、嫩豆腐、龙利鱼/鲈鱼（泥状）。</li>
+                                <li><b>蔬果：</b>熟香蕉、蒸苹果泥、去皮丝瓜（粘液质保护）、冬瓜。</li>
+                                <li><b>液体：</b>温热白开水、微温原味酸奶（48小时后）。</li>
+                            </ul>
+                        </div>
+                        <!-- Forbidden -->
+                        <div class="glass-morphism p-8 rounded-[2.5rem] bg-red-50/20 border-l-8 border-red-500">
+                            <h3 class="font-bold text-red-700 mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                绝对红线 (熔断)
+                            </h3>
+                            <ul class="space-y-4 text-sm">
+                                <li><b>生化性：</b>**酒精（彻底戒断）**、咖啡、浓茶、可乐。</li>
+                                <li><b>化学性：</b>辣椒、生大蒜、山楂、柠檬、浓肉汤（高嘌呤）。</li>
+                                <li><b>机械性：</b>韭菜、芹菜、坚果、爆米花、煎炸硬壳。</li>
+                                <li><b>代谢性：</b>巧克力、奶油蛋糕、油炸肥肉。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Meal Plan -->
+                <section id="plan" class="glass-morphism p-10 rounded-[2.5rem] card-shadow bg-white">
+                    <h2 class="text-3xl font-bold mb-8">七日全息修复计划 (V1.0)</h2>
+                    <div class="overflow-x-auto no-scrollbar">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-gray-50 text-gray-400 uppercase text-xs tracking-wider">
+                                <tr>
+                                    <th class="px-4 py-4">时间阶段</th>
+                                    <th class="px-4 py-4">早餐 (08:00)</th>
+                                    <th class="px-4 py-4">午/晚主餐 (12:00/18:00)</th>
+                                    <th class="px-4 py-4">加餐 (15:30/21:00)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="bg-blue-50/30">
+                                    <td class="px-4 py-6 font-bold text-blue-600 italic">Day 1 今晚</td>
+                                    <td class="px-4 py-6">-</td>
+                                    <td class="px-4 py-6">山药肉糜粥 + 蒸豆腐</td>
+                                    <td class="px-4 py-6">苏打饼干 2 片</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-6 font-bold">Day 2 愈合期</td>
+                                    <td class="px-4 py-6">碱性细挂面 + 蒸蛋羹</td>
+                                    <td class="px-4 py-6">午: 龙利鱼泥 + 烂饭<br>晚: 蒸南瓜 + 软馒头</td>
+                                    <td class="px-4 py-6">蒸苹果泥</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-6 font-bold">Day 3 修复期</td>
+                                    <td class="px-4 py-6">温牛奶 + 软馒头片</td>
+                                    <td class="px-4 py-6">午: 清蒸鲈鱼泥 + 丝瓜碎肉<br>晚: 西葫芦肉末软面</td>
+                                    <td class="px-4 py-6">熟香蕉 (切小段)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-6 font-bold">Day 4 固本期</td>
+                                    <td class="px-4 py-6">小米油粥 + 软包子</td>
+                                    <td class="px-4 py-6">午: 嫩豆腐炖肉末 + 烂饭<br>晚: 冬瓜虾仁糜粥</td>
+                                    <td class="px-4 py-6">常温原味酸奶</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-6 font-bold text-gray-400 italic">Day 5-7</td>
+                                    <td colspan="3" class="px-4 py-6 text-center text-gray-400">重复 Day 3-4 逻辑，等待病理报告定夺后续进化方案</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section: Behavioral SOP -->
+                <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="apple-card p-6 text-center">
+                        <div class="text-3xl mb-2">🦷</div>
+                        <h4 class="font-bold">咀嚼 30+ 次</h4>
+                        <p class="text-xs text-gray-400 mt-1">利用唾液溶菌酶替代胃动力预消化。</p>
+                    </div>
+                    <div class="apple-card p-6 text-center">
+                        <div class="text-3xl mb-2">🌡️</div>
+                        <h4 class="font-bold">40°C 恒温</h4>
+                        <p class="text-xs text-gray-400 mt-1">避免极端温度诱发粘膜血管舒缩痉挛。</p>
+                    </div>
+                    <div class="apple-card p-6 text-center">
+                        <div class="text-3xl mb-2">🤝</div>
+                        <h4 class="font-bold">体面拒绝</h4>
+                        <p class="text-xs text-gray-400 mt-1">“术后恢复期，绝对禁酒”是目前最高等级的社交盾牌。</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Progress -->
+    <footer class="fixed bottom-0 w-full glass-morphism py-4 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-sm font-medium">
+            <div class="flex items-center">
+                <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse mr-2"></div>
+                <span>当前进度：活检创口愈合期 (1/3)</span>
+            </div>
+            <div class="text-gray-400 italic">
+                “凡事预则立，不预则废。2026 开启生命价值最大化。”
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
