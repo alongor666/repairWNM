@@ -14,40 +14,254 @@
             --apple-red: #FF3B30;
             --apple-green: #34C759;
             --apple-card-bg: rgba(255, 255, 255, 0.85);
+            --apple-border: rgba(255, 255, 255, 0.4);
         }
+        
+        /* 暗色主题变量 */
+        [data-theme="dark"] {
+            --apple-bg: #1a1a1a;
+            --apple-text: #f5f5f7;
+            --apple-blue: #0A84FF;
+            --apple-red: #FF453A;
+            --apple-green: #32D74B;
+            --apple-card-bg: rgba(30, 30, 30, 0.85);
+            --apple-border: rgba(255, 255, 255, 0.1);
+        }
+        
         body {
             font-family: 'SF Pro Display', 'Inter', -apple-system, system-ui, sans-serif;
             background-color: var(--apple-bg);
             color: var(--apple-text);
             line-height: 1.5;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
+        
         .glass-morphism {
             background: var(--apple-card-bg);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            border: 1px solid var(--apple-border);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
+        
         .card-shadow {
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
         }
+        
+        [data-theme="dark"] .card-shadow {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 暗色主题下的其他元素调整 */
+        [data-theme="dark"] .border-gray-200 {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        [data-theme="dark"] .border-gray-100 {
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        [data-theme="dark"] .text-gray-400 {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        [data-theme="dark"] .text-gray-500 {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        [data-theme="dark"] .text-gray-600 {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        [data-theme="dark"] .text-gray-700 {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        [data-theme="dark"] .hover\:text-black:hover {
+            color: var(--apple-text) !important;
+        }
+        
+        [data-theme="dark"] .bg-gray-50 {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        [data-theme="dark"] .bg-blue-50\/30 {
+            background-color: rgba(59, 130, 246, 0.2);
+        }
+        
+        [data-theme="dark"] .bg-green-50\/20 {
+            background-color: rgba(34, 197, 94, 0.1);
+        }
+        
+        [data-theme="dark"] .bg-red-50\/20 {
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+        
+        [data-theme="dark"] .bg-blue-50\/50 {
+            background-color: rgba(59, 130, 246, 0.15);
+        }
+        
+        [data-theme="dark"] .bg-white\/50 {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        [data-theme="dark"] .bg-white {
+            background-color: rgba(30, 30, 30, 0.9);
+        }
+        
+        [data-theme="dark"] .divide-gray-100 {
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        /* 表格暗色主题优化 */
+        [data-theme="dark"] table {
+            background-color: rgba(30, 30, 30, 0.9);
+        }
+        
+        [data-theme="dark"] thead {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+        
+        [data-theme="dark"] thead th {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* 苹果卡片样式 */
+        .apple-card {
+            background: var(--apple-card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--apple-border);
+            border-radius: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        [data-theme="dark"] .apple-card {
+            background: rgba(30, 30, 30, 0.8);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
         .gradient-text {
-            background: linear-gradient(135deg, #1D1D1F 0%, #434343 100%);
+            background: linear-gradient(135deg, var(--apple-text) 0%, #888 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        
         .status-badge {
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 600;
         }
+        
         .sidebar-sticky {
             position: sticky;
             top: 2rem;
         }
+        
+        /* 老花眼模式样式 */
+        [data-presbyopia="true"] {
+            --font-scale: 1.3;
+            --line-height-scale: 1.6;
+        }
+        
+        [data-presbyopia="true"] body {
+            font-size: calc(16px * var(--font-scale));
+            line-height: var(--line-height-scale);
+        }
+        
+        [data-presbyopia="true"] h1 {
+            font-size: calc(3rem * var(--font-scale));
+        }
+        
+        [data-presbyopia="true"] h2 {
+            font-size: calc(1.875rem * var(--font-scale));
+        }
+        
+        [data-presbyopia="true"] h3 {
+            font-size: calc(1.25rem * var(--font-scale));
+        }
+        
+        [data-presbyopia="true"] h4 {
+            font-size: calc(1.125rem * var(--font-scale));
+        }
+        
+        [data-presbyopia="true"] .text-sm {
+            font-size: calc(0.875rem * var(--font-scale));
+        }
+        
+        [data-presbyopia="true"] .text-xs {
+            font-size: calc(0.75rem * var(--font-scale));
+        }
+        
+        [data-presbyopia="true"] table {
+            font-size: calc(0.875rem * var(--font-scale));
+        }
+        
+        /* 主题切换按钮样式 */
+        .theme-toggle {
+            position: fixed;
+            top: 6rem;
+            right: 2rem;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .theme-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--apple-card-bg);
+            border: 2px solid var(--apple-border);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .theme-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-btn.active {
+            background: var(--apple-blue);
+            color: white;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .theme-toggle {
+                top: 5rem;
+                right: 1rem;
+            }
+            
+            .theme-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased" data-theme="dark" data-presbyopia="false">
+
+    <!-- 主题切换按钮 -->
+    <div class="theme-toggle">
+        <button class="theme-btn" id="themeToggle" title="切换主题">
+            🌙
+        </button>
+        <button class="theme-btn" id="presbyopiaToggle" title="老花眼模式">
+            👁️
+        </button>
+    </div>
 
     <!-- Hero Navigation -->
     <nav class="fixed top-0 w-full z-50 glass-morphism border-b border-gray-200">
@@ -250,6 +464,85 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // 主题切换功能
+        const themeToggle = document.getElementById('themeToggle');
+        const presbyopiaToggle = document.getElementById('presbyopiaToggle');
+        const body = document.body;
+        
+        // 初始化主题状态
+        let currentTheme = 'dark';
+        let presbyopiaMode = false;
+        
+        // 从localStorage读取用户偏好
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const savedPresbyopia = localStorage.getItem('presbyopia') === 'true';
+        
+        // 应用保存的设置
+        applyTheme(savedTheme);
+        applyPresbyopia(savedPresbyopia);
+        
+        // 主题切换函数
+        function applyTheme(theme) {
+            currentTheme = theme;
+            body.setAttribute('data-theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+            themeToggle.title = theme === 'dark' ? '切换到亮色主题' : '切换到暗色主题';
+            localStorage.setItem('theme', theme);
+        }
+        
+        // 老花眼模式切换函数
+        function applyPresbyopia(enabled) {
+            presbyopiaMode = enabled;
+            body.setAttribute('data-presbyopia', enabled);
+            presbyopiaToggle.classList.toggle('active', enabled);
+            presbyopiaToggle.title = enabled ? '关闭老花眼模式' : '开启老花眼模式';
+            localStorage.setItem('presbyopia', enabled);
+        }
+        
+        // 主题切换事件监听
+        themeToggle.addEventListener('click', () => {
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+        
+        // 老花眼模式切换事件监听
+        presbyopiaToggle.addEventListener('click', () => {
+            applyPresbyopia(!presbyopiaMode);
+        });
+        
+        // 键盘快捷键支持
+        document.addEventListener('keydown', (e) => {
+            // Ctrl/Cmd + Shift + D: 切换主题
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'D') {
+                e.preventDefault();
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+            }
+            // Ctrl/Cmd + Shift + P: 切换老花眼模式
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'P') {
+                e.preventDefault();
+                applyPresbyopia(!presbyopiaMode);
+            }
+        });
+        
+        // 检测系统主题偏好（仅在首次访问时使用）
+        if (!localStorage.getItem('theme')) {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyTheme(prefersDark ? 'dark' : 'light');
+        }
+        
+        // 监听系统主题变化（可选功能）
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            // 仅在用户没有手动设置过主题时才跟随系统
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+        
+        console.log('🎨 主题系统已初始化 - 当前主题:', currentTheme, '老花眼模式:', presbyopiaMode);
+    </script>
 
 </body>
 </html>
